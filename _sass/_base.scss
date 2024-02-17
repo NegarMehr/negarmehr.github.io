@@ -4,16 +4,33 @@
 
 // Typography
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+p{
+  font-family:  'Latin Modern';
+}
+
+h1{
+  font-family:  'Latin Modern';
+}
+h2{
+  font-family:  'Latin Modern';
+}
+h3{
+  font-family:  'Latin Modern';
+}
+h4{
+  font-family:  'Latin Modern';
+}
+h5{
+  font-family:  'Latin Modern';
+}
+h6{
+  font-family:  'Latin Modern';
+}
 em,
 div,
-li,
+li{
+  font-family:  'Latin Modern';
+}
 span,
 strong {
   color: var(--global-text-color);
@@ -24,8 +41,11 @@ hr {
 }
 
 table {
-  td,
+  td{
+    font-family: 'Latin Modern';
+  }
   th {
+    font-family: 'Latin Modern';
     font-size: 1rem;
   }
 
@@ -657,6 +677,7 @@ footer.sticky-bottom {
 // Publications
 
 .publications {
+  font-family:  'Latin Modern';
   margin-top: 2rem;
 
   h1 {
