@@ -32,3 +32,11 @@
 "planck":
   - firstname: ["Max"]
     url: https://en.wikipedia.org/wiki/Max_Planck
+
+"Mac":
+  - firstname: ["Mac", "Mac Schwager"]
+    url: https://web.stanford.edu/~schwager/
+  
+"Ramtin":
+  - firstname: ["Ramtin", "Ramtin Pedarsani", "Pedarsani, Ramtin", "Pedarsani"]
+    url: https://web.ece.ucsb.edu/~ramtin/
