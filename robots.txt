@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://negarzmehr.github.io/sitemap.xml
