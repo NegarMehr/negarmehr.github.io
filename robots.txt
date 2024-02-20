@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://negarzmehr.github.io/sitemap.xml
+Sitemap: https://negarmehr.github.io/sitemap.xml
