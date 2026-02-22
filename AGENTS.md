@@ -34,3 +34,6 @@
 ## Configuration Tips
 - Set `url` and `baseurl` correctly in `_config.yml` before building/deploying.
 - For CV content, use `assets/json/resume.json` or `_data/cv.yml` (JSON takes priority).
+## Navigation Overrides
+- Top-nav items come from `_pages/*.md` with `nav: true` and are rendered by `_includes/header.liquid`.
+- To point a nav item to an external site, add `external_url: https://example.com/path/` in the page front matter (for example `_pages/publications.md`). The navbar will use this URL instead of the local permalink.

@@ -45,6 +45,16 @@ Change [/_bibliography/papers.bib](/_bibliography/papers.bib). There are some us
 
 By default, only the first 3 authors are shown, the rest are hidden. To change this, you need to change `max_author_limit: 3` in [/_config.yml](/_config.yml) (leave blank to show all authors).
 
+## Publications tab redirect
+
+The top navigation is built from `_pages/*.md` files that have `nav: true`. To make the Publications tab go to the external ICON Lab page, set this in `_pages/publications.md` front matter:
+
+```yaml
+external_url: https://iconlab.negarmehr.com/publications/
+```
+
+The navbar template (`_includes/header.liquid`) is wired to use `external_url` when present.
+
 
 # Modifying projects
 
