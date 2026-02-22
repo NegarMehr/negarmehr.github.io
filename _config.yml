@@ -206,6 +206,7 @@ exclude:
   - bin
   - CONTRIBUTING.md
   - CUSTOMIZE.md
+  - AGENTS.md
   - docker-compose.yml
   - Dockerfile
   - FAQ.md
