@@ -5,4 +5,3 @@ inline: true
 ---
 
 I joined UIUC Aerospace Engineering department as an assistant professor.
-

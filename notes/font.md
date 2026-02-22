@@ -1,7 +1,7 @@
 # Change font to LaTeX font
 
-* First, added latex fonts from [this github repo](https://github.com/vincentdoerig/latex-css/tree/master). I copied all the fonts from the `fonts` folder there to [assets/webfonts](/assets/webfonts/). 
-* Then, I changed the [/_sass/font-awesome/regular.scss](/_sass/font-awesome/regular.scss) file by adding a few `@font-face` lines borrowed from the [style.css](https://github.com/vincentdoerig/latex-css/blob/master/style.css) file in the aformentioned github repo. These are the lines I added:
+- First, added latex fonts from [this github repo](https://github.com/vincentdoerig/latex-css/tree/master). I copied all the fonts from the `fonts` folder there to [assets/webfonts](/assets/webfonts/).
+- Then, I changed the [/\_sass/font-awesome/regular.scss](/_sass/font-awesome/regular.scss) file by adding a few `@font-face` lines borrowed from the [style.css](https://github.com/vincentdoerig/latex-css/blob/master/style.css) file in the aformentioned github repo. These are the lines I added:
 
 ```
 @font-face {
@@ -45,10 +45,10 @@
 }
 ```
 
-* So far, we have added the fonts, and defined them. Now, we must define the styles. For this, we need to change the [/_sass/_base.scss](/_sass/_base.scss) file. 
-* Basically, we need to add `font-family:  'Latin Modern';` to a lot of styles, such as `p`, `h1`, `h2`, ...
-* To figure out which part to change, use Chrome inspect to knwo the style of a specific part. 
+- So far, we have added the fonts, and defined them. Now, we must define the styles. For this, we need to change the [/\_sass/\_base.scss](/_sass/_base.scss) file.
+- Basically, we need to add `font-family:  'Latin Modern';` to a lot of styles, such as `p`, `h1`, `h2`, ...
+- To figure out which part to change, use Chrome inspect to knwo the style of a specific part.
 
 # Change first name from bold to normal
 
-in [/_layouts/about.liquid](/_layouts/about.liquid), line 8 and 9, change `<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}` to `{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}`
+in [/\_layouts/about.liquid](/_layouts/about.liquid), line 8 and 9, change `<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}` to `{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}`
