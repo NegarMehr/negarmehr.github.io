@@ -95,9 +95,17 @@
                   </div>
                 </li>
               {% else %}
-                <li class="nav-item {% if page.url contains p.permalink %}active{% endif %}">
-                  {% if p.permalink contains '/blog/' %}{% assign url = '/blog/' %} {% else %}{% assign url = p.url %}{% endif %}
-                  <a class="nav-link" href="{{ url | relative_url }}">
+                <li class="nav-item {% if p.external_url == null and page.url contains p.permalink %}active{% endif %}">
+                  {% assign is_external = false %}
+                  {% if p.external_url %}
+                    {% assign url = p.external_url %}
+                    {% assign is_external = true %}
+                  {% elsif p.permalink contains '/blog/' %}
+                    {% assign url = '/blog/' %}
+                  {% else %}
+                    {% assign url = p.url %}
+                  {% endif %}
+                  <a class="nav-link" href="{% if is_external %}{{ url }}{% else %}{{ url | relative_url }}{% endif %}">
                     {{- p.title }}
                     {% if page.url contains p.url %}
                       <span class="sr-only">(current)</span>

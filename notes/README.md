@@ -6,7 +6,7 @@ It is important to apply your edits on your local machine and make sure they loo
 
 ## How to pull the repo
 
-There are many ways. Perhaps the easiest (assuming you have [github CLI](https://cli.github.com/)) is 
+There are many ways. Perhaps the easiest (assuming you have [github CLI](https://cli.github.com/)) is
 
 ```bash
 gh repo clone labicon/labicon.github.io
@@ -20,51 +20,58 @@ There are some ways described in [the al-folio installation document](/INSTALL.m
 docker compose pull
 ```
 
-To preview, do 
+To preview, do
 
 ```bash
 docker compose up
 ```
 
-
-
 # How to change the text on the front (about) page
 
-You need to modify [_pages/about.md](/_pages/about.md).
+You need to modify [\_pages/about.md](/_pages/about.md).
 
-# How to modify papers 
+# How to modify papers
 
-Change [/_bibliography/papers.bib](/_bibliography/papers.bib). There are some useful extra things you can add (see [these instructions](https://github.com/alshedivat/al-folio/blob/master/CUSTOMIZE.md#adding-a-new-publication) for more details). For instance:
-* If you add `bibtex_show={true}`, the bibtex source of the paper will be shown for someone to copy. 
-* Add paper link by `html={<link>}`
-* Add `arxiv={xxxx.xxxxx}` for arXiv link (note that you should only insert the 9 digit arXiv identifier, not the whole link).
-* Add `preview={<image-file-name>}` to have a picture shown to the left of the paper. `<image-file-name>` is the file name that exists in [/assets/img/publication_preview/](/assets/img/publication_preview/). This can be a `gif` file to make it exciting! ([example](https://alshedivat.github.io/al-folio/publications/)).
-* Add `paper={<pdf-file-name.pdf>}` to show a pdf version of the paper (good for preprints perhaps). `<pdf-file-name.pdf>` should be in [/assets/pdf/](/assets/pdf/).
+Change [/\_bibliography/papers.bib](/_bibliography/papers.bib). There are some useful extra things you can add (see [these instructions](https://github.com/alshedivat/al-folio/blob/master/CUSTOMIZE.md#adding-a-new-publication) for more details). For instance:
+
+- If you add `bibtex_show={true}`, the bibtex source of the paper will be shown for someone to copy.
+- Add paper link by `html={<link>}`
+- Add `arxiv={xxxx.xxxxx}` for arXiv link (note that you should only insert the 9 digit arXiv identifier, not the whole link).
+- Add `preview={<image-file-name>}` to have a picture shown to the left of the paper. `<image-file-name>` is the file name that exists in [/assets/img/publication_preview/](/assets/img/publication_preview/). This can be a `gif` file to make it exciting! ([example](https://alshedivat.github.io/al-folio/publications/)).
+- Add `paper={<pdf-file-name.pdf>}` to show a pdf version of the paper (good for preprints perhaps). `<pdf-file-name.pdf>` should be in [/assets/pdf/](/assets/pdf/).
 
 ## Change the number of authors shown for papers
 
-By default, only the first 3 authors are shown, the rest are hidden. To change this, you need to change `max_author_limit: 3` in [/_config.yml](/_config.yml) (leave blank to show all authors).
+By default, only the first 3 authors are shown, the rest are hidden. To change this, you need to change `max_author_limit: 3` in [/\_config.yml](/_config.yml) (leave blank to show all authors).
 
+## Publications tab redirect
+
+The top navigation is built from `_pages/*.md` files that have `nav: true`. To make the Publications tab go to the external ICON Lab page, set this in `_pages/publications.md` front matter:
+
+```yaml
+external_url: https://iconlab.negarmehr.com/publications/
+```
+
+The navbar template (`_includes/header.liquid`) is wired to use `external_url` when present.
 
 # Modifying projects
 
-Each project has a file in the [/_projects/](/_projects/). See the existing projects there to get an idea. 
+Each project has a file in the [/\_projects/](/_projects/). See the existing projects there to get an idea.
 
 ## Add paper references for a project
 
-It might be useful to cite papers when talking about a project and have a list of cited papers at the bottom of the page. For doing so for a project (same concept holds for posts, which we do not currently have), to cite a paper, do 
+It might be useful to cite papers when talking about a project and have a list of cited papers at the bottom of the page. For doing so for a project (same concept holds for posts, which we do not currently have), to cite a paper, do
 
 ```liquid
 {% cite <bib-entry-id> %}
 ```
 
-Also, make sure to have `related_publications: true` on top of the project page. 
+Also, make sure to have `related_publications: true` on top of the project page.
 
 # News
 
-Each news has a file in [/_news/](/_news/). See the examples there to get an idea. It is useful to name the file for a new such that it starts with the date so that everything is organized. 
+Each news has a file in [/\_news/](/_news/). See the examples there to get an idea. It is useful to name the file for a new such that it starts with the date so that everything is organized.
 
-
-# Changing fonts 
+# Changing fonts
 
 See [/notes/font.md](/notes/font.md).
