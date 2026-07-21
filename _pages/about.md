@@ -14,7 +14,7 @@ profile:
     <p>Berkeley, CA 94720-1740</p>
     <p><a href="mailto:negar@berkeley.edu">negar@berkeley.edu</a></p>
 
-news: true # includes a list of news items
+news: false # includes a list of news items
 latest_posts: false # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
